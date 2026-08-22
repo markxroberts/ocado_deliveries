@@ -1,0 +1,11 @@
+{
+  "domain": "ocado_deliveries",
+  "name": "Ocado Deliveries",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [],
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "0.2.1"
+}

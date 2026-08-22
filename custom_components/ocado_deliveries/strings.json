@@ -1,0 +1,61 @@
+{
+  "title": "Ocado Deliveries",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Ocado",
+        "description": "Ocado may require two-factor authentication for a new browser login. Sign in to Ocado in Chrome, open Developer Tools > Network, select a successful /graphql request, right-click the request row and choose Copy > Copy as cURL (bash), then paste the complete cURL command below. The integration extracts and stores only the Cookie value; it does not store your password, CSRF token, or the other pasted headers.",
+        "data": {
+          "browser_headers": "Copied cURL request"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Refresh Ocado browser session",
+        "description": "The saved Ocado browser session has expired. Sign in to Ocado in Chrome (including two-factor authentication if requested), copy a successful /graphql request as cURL (bash), and paste it below. Only the Cookie value is stored.",
+        "data": {
+          "browser_headers": "Copied cURL request"
+        }
+      },
+      "reconfigure": {
+        "title": "Refresh Ocado browser session",
+        "description": "Use this to replace the saved Ocado browser session before it expires. In Chrome, copy a successful Ocado /graphql request as cURL (bash) and paste it below. Only the Cookie value is stored.",
+        "data": {
+          "browser_headers": "Copied cURL request"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to Ocado.",
+      "invalid_auth": "Ocado rejected this browser session. Sign in again and copy a fresh /graphql request as cURL.",
+      "cookie_not_found": "No Ocado session cookie was found. Paste the complete Chrome Copy as cURL (bash) command from a successful /graphql request, or the raw Cookie value.",
+      "api_error": "Ocado returned an unexpected response. The website API may have changed.",
+      "unknown": "Unexpected error. Check the Home Assistant logs for details."
+    },
+    "abort": {
+      "already_configured": "Ocado Deliveries is already configured.",
+      "reauth_successful": "Ocado session refreshed successfully.",
+      "reconfigure_successful": "Ocado session refreshed successfully."
+    }
+  },
+  "entity": {
+    "calendar": {
+      "deliveries": {
+        "name": "Deliveries"
+      },
+      "edit_deadlines": {
+        "name": "Edit deadlines"
+      }
+    },
+    "sensor": {
+      "next_delivery": {
+        "name": "Next delivery"
+      },
+      "next_edit_deadline": {
+        "name": "Next edit deadline"
+      },
+      "upcoming_deliveries": {
+        "name": "Upcoming deliveries"
+      }
+    }
+  }
+}
