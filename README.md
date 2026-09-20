@@ -39,7 +39,7 @@ Ocado can require two-factor authentication for a new browser login, so this int
 
 The integration extracts and stores only the Ocado Cookie value. It does **not** store the copied CSRF token or other request headers. Before each GraphQL session it obtains a current CSRF token from authenticated Ocado page HTML.
 
-When the browser session expires, Home Assistant automatically starts a reauthentication flow. v0.2.0 also provides **Reconfigure** on the integration entry so the browser session can be refreshed proactively.
+When the browser session expires, Home Assistant automatically starts a reauthentication flow. v0.2.0 and later also provide **Reconfigure** on the integration entry so the browser session can be refreshed proactively.
 
 ## Polling
 
@@ -57,4 +57,4 @@ This uses Ocado's private website API rather than a published public API. Ocado 
 
 ## Version
 
-0.2.0
+0.2.1
